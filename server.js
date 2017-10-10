@@ -22,9 +22,10 @@ app.use((req, res, next) => {
     });
     next();
 });
-app.use((req, res, next) => {
-    res.render("maintenance");
-});
+// app.use((req, res, next) => {
+//     res.render("maintenance");
+// });
+
 
 app.use(express.static(__dirname + "/public"));
 
@@ -52,6 +53,12 @@ app.get("/about", (req, res) => {
     });
 });
 
+
+app.get("/portfolio", (req,res) => {
+    res.render("portfolio", {
+        pagetitle: "My website!",
+    });
+});
 
 app.get("/bad", (req, res) => {
     res.send({
