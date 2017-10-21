@@ -56,7 +56,14 @@ app.get("/about", (req, res) => {
 
 app.get("/portfolio", (req,res) => {
     res.render("portfolio", {
-        pagetitle: "My website!",
+        pageTitle: "Projects!",
+    });
+});
+
+app.get("/dashboard", (req, res) => {
+    res.render("dashboard", {
+        pageTitle: "Dashboard",
+        welcomeMessage: "My website dashboard!",
     });
 });
 
